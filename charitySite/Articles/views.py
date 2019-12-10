@@ -8,4 +8,4 @@ from django.template import loader
 class Homepage(View):
     def get(self, request):
         template = loader.get_template('articles/index.html')  #  Templates folder needs to be within App is True
-        return HttpResponse(template.render({"Key": 12}, request))
+        return HttpResponse(template.render({"cssFile": 'articles/index.css'}, request))
