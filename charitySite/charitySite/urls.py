@@ -19,5 +19,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Articles.urls'))
+    path('', include('Funds.urls')),
+    path('charity/', include('Charities.urls'))  # This will be for other app
    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

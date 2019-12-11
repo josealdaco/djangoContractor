@@ -1,0 +1,29 @@
+{% extends 'articles/base.html'%}
+{% block content%}
+    {% load static %}
+    <nav class="navbar navbar-light bg-dark justify-content-center"  style="border: 5px solid black;">
+        <form method="get" action=" {% url 'homePage'%}">
+            {% csrf_token %}
+                <button class = "button" style="background-color: Transparent;background-repeat:no-repeat;    border: none;
+"> <img src="{% static 'charity/images/back-button.png'%}" style="width: 50px; height:50px"> </button>
+                </form>
+                    <p style = "color:black;font-size: 25px"> {{title}} </p>
+
+    </nav>
+    <div  class="container-fluid"style="height:700px; border:5px solid green">
+        <div class = "row">
+            <div class = "column-md-12 col-lg-12" style = "border:5px solid red;">
+                <div  style="border:5px solid yellow">
+                    <img src=" {% static 'articles/images/ocean-image.jpg'%}" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "column-md-12 col-lg-12" style = "border:5px solid red;">
+                <div  style="border:5px solid yellow">
+                    <img src=" {% static 'articles/images/ocean-image.jpg'%}" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+            </div>
+    </div>
+{%endblock%}
