@@ -11,7 +11,7 @@ from django.http import HttpResponseRedirect
 from .models import wikiPagesModel
 import requests
 # Create your views here.
-from .config import SECRET_KEY  #  Keeping my API Key a SECRET_KEY :)
+from .config import SECRET_KEY_DiffBot, SECRET_KEY_NEWS   #  Keeping my API Key a SECRET_KEY :)
 
 
 class Homepage(View):
@@ -21,11 +21,15 @@ class Homepage(View):
         context = {}
         data_dict = {}
         for item in title_list:
-            response2 = requests.get('https://en.wikipedia.org/w/api.php?action=query&format=json&prop=info&generator=search&inprop=url&gsrnamespace=0&gsrlimit=5&gsrsearch={}'.format(item))
-            data = response2.json()['query']['pages']  #  Get list of pages
-            first_key = list(data.keys())[0]  # Only want the first One
-            article_url = data[first_key]['canonicalurl']  #  Only want the url
-            context.update({item: article_url})
+            params = {
+                    'q': item,
+                    'from': '2019-12-12',
+                    'sortBy': 'popularity',
+                    'apiKey': SECRET_KEY_NEWS
+            }
+            response2 = requests.get('https://newsapi.org/v2/', params)
+            data = response2.json()['articles'][0]['url']  #  Get list of pages
+            context.update({item: data})
         #  Brute force way to create model, will optimize later
 
         data_dict.update({'fundOneURL': context.get(title_list[0]),
@@ -84,7 +88,7 @@ class Charitypage(View):
         title = request.POST['title']
         template = loader.get_template('charity/index.html')
         """ Starting to call API """
-        diffbotparams = {'token': SECRET_KEY,
+        diffbotparams = {'token': SECRET_KEY_DiffBot,
                          'url': request.POST['url'],
                          'paging': False,
                          'maxPages': 1,
