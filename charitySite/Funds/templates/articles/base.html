@@ -18,14 +18,32 @@
             {%block content%}
             <!--Screen Info shown here-->
             {%endblock%}
-            <form style="position: absolute;bottom:0; text-align:center;">
-                <button class = "button">Icon Here</button>
-                <button class = "button">Icon Here</button>
-                <button class = "button">Icon Here</button>
-                <button class = "button">Icon Here</button>
-
-            </form>
         </div>
+        {% load static %}
+        <form style="position: relative;;bottom:0; text-align:center; display:inline-block;" method="post" action="{% url 'homePage' %}">
+            {% csrf_token %}
+            <button  type="submit"  style="background:Transparent; background-repeat:no-repeat;border: none;"><img style="max-height:50px;max-width:50px;" src = "{% static 'homePage/images/home.png' %}" alt = "home Icon">
+            </button>
+            <input type="hidden" name = "title" value = "Funds">
+            </form>
+            <form style="position: relative;;bottom:0; text-align:center; display:inline-block;" method="post" action="{% url 'info-view' %}">
+                {% csrf_token %}
+            <button  type="submit" style="background:Transparent; background-repeat:no-repeat;border: none;"><img style="max-height:50px;max-width:50px;" src = "{% static 'homePage/images/magnifying-glass.png' %}" alt = " search Icon">
+            </button>
+            <input type="hidden" name = "title" value = "Company Info">
+            </form>
+            <form style="position: relative;;bottom:0; text-align:center; display:inline-block;" method="post" action="{% url 'news-view' %}">
+                {% csrf_token %}
+            <button  type="submit" style="background:Transparent; background-repeat:no-repeat;border: none;"><img style="max-height:50px;max-width:50px;" src = "{% static 'homePage/images/open-book.png' %}" alt = " open-book Icon">
+            </button>
+            <input type="hidden" name = "title" value = "News">
+            </form>
+            <form style="position: relative;;bottom:0; text-align:center; display:inline-block;" method="post" action="{% url 'settings-view' %}">
+                {% csrf_token %}
+            <button  type="submit" style="background:Transparent; background-repeat:no-repeat;border: none;"><img  style="max-height:50px;max-width:50px;"src = "{% static 'homePage/images/settings.png' %}" alt = " settings Icon">
+            </button>
+            <input type="hidden" name = "title" value = "Settings">
+        </form>
 <!-- As a heading -->
     </body>
 </html>
