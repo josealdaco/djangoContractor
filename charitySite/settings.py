@@ -25,7 +25,7 @@ SECRET_KEY = '5dwyz(d**o(#22-wv+4u35k6ge5kt7&ysmwg-jiuz()s-uozkj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://charitywebsite.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', 'https://charitywebsite.herokuapp.com']
 
 
 # Application definition
