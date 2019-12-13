@@ -5,9 +5,13 @@ from django.db import models
 
 class wikiPagesModel(models.Model):
     fundOneURL = models.TextField()
+    fundOneTitle = models.TextField()
     fundTwoURL = models.TextField()
+    fundTwoTitle = models.TextField()
     fundThreeURL = models.TextField()
+    fundThreeTitle = models.TextField()
     fundFourURL = models.TextField()
+    fundFourTitle = models.TextField()
 
     #  wikiPagesModel.objects.bulk_create(([wikiPagesModel(**{'batch_cola' : m[0],
         #                                'batch_colb' : m[1],

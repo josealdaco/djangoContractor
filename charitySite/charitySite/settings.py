@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Charities',
-    'Articles',
+    'rest_framework',
+    'api',
     'Funds',
     'django.contrib.admin',
     'django.contrib.auth',
