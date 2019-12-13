@@ -10,7 +10,7 @@
                     <form method="post" action="{% url 'charityview'%}">
                         {% csrf_token %}
                         <input type="hidden" name = "title" value = "Ocean">
-                        <input type="hidden" name = "url" value = "{{Oceans}}">
+                        <input type="hidden" name = "fund" value = "fundOneURL">
                     <button class = "button" type="submit"style = "border:5px solid purple; width:325px; height:220px; background-size:cover; border-radius:20%;"> <img src="{% static "articles/images/ocean-image.jpg" %}" alt="My image" width = "300px" height="200px" style=" background-size:cover; border-radius:15%;border: 4px solid black">
                     </button>
                 </form>
@@ -21,7 +21,7 @@
                     <form method="post" action="{% url 'charityview'%}">
                         {% csrf_token %}
                         <input type="hidden" name = "title" value = "Trees">
-                        <input type="hidden" name = "url" value = "{{Trees}}">
+                        <input type="hidden" name = "fund" value = "fundTwoURL">
                     <button class = "button" type="submit" style = "border:5px solid purple; width:325px; height:220px; background-size:cover; border-radius:20%;"> <img src="{% static "articles/images/trees-image.jpg" %}" alt="My image" width = "300px" height="200px" style=" background-size:cover; border-radius:15%;border: 4px solid black">
                 </button>
             </form>
@@ -33,7 +33,7 @@
                     <form method="post" action="{% url 'charityview'%}">
                         {% csrf_token %}
                         <input type="hidden" name = "title" value = "Hunger">
-                        <input type="hidden" name = "url" value = "{{Hunger}}">
+                        <input type="hidden" name = "fund" value = "fundThreeURL">
                     <button class = "button" type="submit"style = "border:5px solid purple; width:325px; height:220px; background-size:cover; border-radius:20%;"> <img src="{% static "articles/images/hunger-image.jpg" %}" alt="My image" width = "300px" height="200px" style=" background-size:cover; border-radius:15%;border: 4px solid black">
                     </button>
                 </form>
@@ -44,7 +44,7 @@
                     <form method="post" action="{% url 'charityview'%}">
                         {% csrf_token %}
                         <input type="hidden" name = "title" value = "Global Warming">
-                        <input type="hidden" name = "url" value = "{{Globalwarming}}">
+                        <input type="hidden" name = "fund" value = "fundFourURL">
                     <button class = "button" type="submit"style = "border:5px solid purple; width:325px; height:220px; background-size:cover; border-radius:20%;"> <img src="{% static "articles/images/greenhouse-image.jpg" %}" alt="My image" width = "300px" height="200px" style="background-size:cover; border-radius:15%;border: 4px solid black">
                 </button>
             </form>
