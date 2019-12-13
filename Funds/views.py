@@ -10,7 +10,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 from .models import wikiPagesModel
 # Create your views here.
-from .appUpdate import updateApp
+#  from .appUpdate import updateApp
 
 
 class Homepage(View):
