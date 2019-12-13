@@ -1,8 +1,8 @@
 from .models import wikiPagesModel
-from .config import SECRET_KEY_DiffBot, SECRET_KEY_NEWS   #  Keeping my API Key a SECRET_KEY :)
+ #  from .config import SECRET_KEY_DiffBot, SECRET_KEY_NEWS   #  Keeping my API Key a SECRET_KEY :)
 import requests
 
-
+"""
 def updateApp():
     context = {}
     data_dict = {}
@@ -41,3 +41,4 @@ def updateApp():
         if objects.id != 1:
             wikiPagesModel.objects.get(id=objects.id).delete()
     return
+    """
