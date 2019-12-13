@@ -11,4 +11,3 @@
 
 <h3><a href = "https://charitywebsite.herokuapp.com">Link to website</a></h3>
 <h3><a href = "https://charitywebsite.herokuapp.com">Link to website api call, where articles are displayed</a></h3>
-<h1> ALL SECRET API KEYS ARE HIDDEN INSIDE A CONFIG FILE, CALLED GITIGNORED IN ORDER TO HIDE THEM :)</h1>
