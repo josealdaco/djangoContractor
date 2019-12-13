@@ -11,7 +11,7 @@ class APIpage(View):
     def get(self, request):
         template = loader.get_template('pageViewer/index.html')
         """ API CALL """
-        response = requests.get('https://charitywebsite.herokuapp.com/api/pages/?format=api')
+        response = requests.get('https://charitywebsite.herokuapp.com/api/pages/?format=json')
         data = response.json()
         context = {
             'oceanTitle': data['fundOneTitle'],
