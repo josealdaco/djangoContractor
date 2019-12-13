@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Funds.urls')),
     path('api/', include('api.urls')),
+    path('pagerView/', include('pagesAPI.urls'))
    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

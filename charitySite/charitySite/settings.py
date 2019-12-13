@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pagesAPI',
     'rest_framework',
     'api',
     'Funds',
